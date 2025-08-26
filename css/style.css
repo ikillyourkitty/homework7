@@ -9,7 +9,7 @@ body {
 nav {
     background-color: #222;
     position: fixed;
-    /* завжди зверху */
+    /* завжди зверху, чат ГПТ підсказав! */
     top: 0;
     left: 0;
     width: 100%;
@@ -31,7 +31,7 @@ nav ul li {
     margin: 0;
 }
 
-/* Посилання */
+/* Посилання, чат ГПТ підсказав! */
 nav ul li a {
     display: block;
     padding: 15px 25px;
@@ -43,13 +43,13 @@ nav ul li a {
     position: relative;
 }
 
-/* Ефект при наведенні */
+/* Ефект при наведенні, чат ГПТ підсказав! */
 nav ul li a:hover {
     background-color: #444;
     color: #ffd700;
 }
 
-/* Плавне підкреслення */
+/* Плавне підкреслення, чат ГПТ підсказав! */
 nav ul li a::after {
     content: "";
     position: absolute;
@@ -73,7 +73,9 @@ nav ul li a:hover::after {
     padding: 5px;
     margin-bottom: 20px;
     height: 400px;
+    /* висота 400px, в майбутньому потрібно інше меню, це кожного разу незручно */
     width: 50%;
+
 }
 
 .box img {
@@ -88,8 +90,52 @@ nav ul li a:hover::after {
     font-weight: bold;
 }
 
+/* Фонові кольори для блоків на сторікі 2 та 3 */
 .background-2-3 {
     background-color: aqua;
     padding: 10px;
     margin-top: 20px;
+}
+
+/* Block */
+.block-example {
+    display: block;
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 50px 0;
+}
+
+/* Inline */
+.inline-example {
+    display: inline;
+    border: 2px solid green;
+    padding: 5px;
+    margin: 50px 5px;
+}
+
+/* Flex */
+.flex-container {
+    display: flex;
+    gap: 100px;
+    border: 2px solid red;
+    padding: 10px;
+    margin: 50px 0;
+}
+
+/* Content-box */
+.box1 {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #333;
+    box-sizing: content-box;
+    margin: 50px 0;
+}
+
+/* Border-box */
+.box2 {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #333;
+    box-sizing: border-box;
+    margin: 50px 0;
 }
