@@ -2,15 +2,16 @@
 <html lang="uk">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Positioning</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <nav>
         <ul>
+            <li><a href="index.html">Головна</a></li>
             <li><a href="1-block-inline.html">Блокові та інлайнові елементи</a></li>
             <li><a href="2-normalize.html">Нормалізація стилів</a></li>
             <li><a href="3-reset.html">Скидання стилів</a></li>
@@ -20,6 +21,105 @@
             <li><a href="7-positioning.html">Позиціонування елементів</a></li>
         </ul>
     </nav>
+    <main>
+        <h1>Позиціонування елементів</h1>
+        <p>Приклади основних типів позиціонування: static, relative, absolute, fixed та sticky.</p>
+        <!-- Static -->
+        <section class="example">
+            <h2>Static (за замовчуванням)</h2>
+            <div class="pos-box static-box">Я static</div>
+            <div class="pos-box static-box">Я теж static</div>
+        </section>
+        <!-- Relative -->
+        <section class="example">
+            <h2>Relative</h2>
+            <div class="pos-box relative-box">Я relative (зсунувся вправо та вниз)</div>
+        </section>
+        <!-- Absolute -->
+        <section class="example">
+            <h2>Absolute</h2>
+            <div class="pos-box absolute-container">
+                <div class="pos-box absolute-box">Я absolute</div>
+            </div>
+        </section>
+        <!-- Fixed -->
+        <section class="example">
+            <h2>Fixed - зверху праворуч!</h2>
+            <div class="pos-box fixed-box">Я fixed (залишаюся зверху праворуч)</div>
+        </section>
+        <!-- Sticky -->
+        <section class="example">
+            <h2>Sticky</h2>
+            <div class="sticky-container">
+                <div class="pos-box sticky-box">Я sticky</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget enim sit amet est laoreet
+                    porta.
+                    Nulla facilisi. Sed sit amet lacus vel sapien malesuada sagittis. Vestibulum ante ipsum primis in
+                    faucibus
+                    orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et
+                    netus
+                    et
+                    malesuada fames ac turpis egestas. Integer non ligula id turpis pulvinar dictum. Mauris suscipit ex
+                    ac
+                    justo porta, at commodo lorem lacinia. Fusce vitae nibh non metus commodo sollicitudin. Quisque
+                    dignissim
+                    orci id augue sollicitudin, vel malesuada purus aliquam. Donec vitae lectus nec sapien placerat
+                    vehicula.
+                    Aliquam erat volutpat. Curabitur eu felis a orci porta pharetra. Proin eget justo a nisi congue
+                    volutpat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget enim sit amet est laoreet
+                    porta.
+                    Nulla facilisi. Sed sit amet lacus vel sapien malesuada sagittis. Vestibulum ante ipsum primis in
+                    faucibus
+                    orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et
+                    netus
+                    et
+                    malesuada fames ac turpis egestas. Integer non ligula id turpis pulvinar dictum. Mauris suscipit ex
+                    ac
+                    justo porta, at commodo lorem lacinia. Fusce vitae nibh non metus commodo sollicitudin. Quisque
+                    dignissim
+                    orci id augue sollicitudin, vel malesuada purus aliquam. Donec vitae lectus nec sapien placerat
+                    vehicula.
+                    Aliquam erat volutpat. Curabitur eu felis a orci porta pharetra. Proin eget justo a nisi congue
+                    volutpat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget enim sit amet est
+                    laoreet
+                    porta.
+                    Nulla facilisi. Sed sit amet lacus vel sapien malesuada sagittis. Vestibulum ante ipsum primis in
+                    faucibus
+                    orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et
+                    netus
+                    et
+                    malesuada fames ac turpis egestas. Integer non ligula id turpis pulvinar dictum. Mauris suscipit ex
+                    ac
+                    justo porta, at commodo lorem lacinia. Fusce vitae nibh non metus commodo sollicitudin. Quisque
+                    dignissim
+                    orci id augue sollicitudin, vel malesuada purus aliquam. Donec vitae lectus nec sapien placerat
+                    vehicula.
+                    Aliquam erat volutpat. Curabitur eu felis a orci porta pharetra. Proin eget justo a nisi congue
+                    volutpat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget enim sit amet est
+                    laoreet
+                    porta.
+                    Nulla facilisi. Sed sit amet lacus vel sapien malesuada sagittis. Vestibulum ante ipsum primis in
+                    faucibus
+                    orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et
+                    netus
+                    et
+                    malesuada fames ac turpis egestas. Integer non ligula id turpis pulvinar dictum. Mauris suscipit ex
+                    ac
+                    justo porta, at commodo lorem lacinia. Fusce vitae nibh non metus commodo sollicitudin. Quisque
+                    dignissim
+                    orci id augue sollicitudin, vel malesuada purus aliquam. Donec vitae lectus nec sapien placerat
+                    vehicula.
+                    Aliquam erat volutpat. Curabitur eu felis a orci porta pharetra. Proin eget justo a nisi congue
+                    volutpat.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Alexandr Fedorenko. 2025</p>
+    </footer>
 </body>
 
 </html>

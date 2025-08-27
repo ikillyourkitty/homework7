@@ -2,15 +2,16 @@
 <html lang="uk">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Overflow</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <nav>
         <ul>
+            <li><a href="index.html">Головна</a></li>
             <li><a href="1-block-inline.html">Блокові та інлайнові елементи</a></li>
             <li><a href="2-normalize.html">Нормалізація стилів</a></li>
             <li><a href="3-reset.html">Скидання стилів</a></li>
@@ -20,6 +21,128 @@
             <li><a href="7-positioning.html">Позиціонування елементів</a></li>
         </ul>
     </nav>
+    <main class="page-content">
+        <h1>Експерименти з overflow</h1>
+        <!-- visible -->
+        <h2>overflow: visible (за замовчуванням)</h2>
+        <p>Вміст може виходити за межі контейнера — нічого не обрізається.</p>
+        <div class="box limited overflow-visible">
+            <p>
+                Довгий текст. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lectus non
+                sapien tristique convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                dictum nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+            </p>
+        </div>
+        <!-- hidden -->
+        <h2>overflow: hidden</h2>
+        <p>Вміст, що виходить за межі контейнера, обрізається — не видно ніскільки.</p>
+        <div class="box limited overflow-hidden">
+            <p>
+                Довгий текст. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lectus non
+                sapien tristique convallis. Цей текст частково сховається. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis.
+            </p>
+        </div>
+        <!-- scroll -->
+        <h2>overflow: scroll</h2>
+        <p>З'являються смуги прокрутки незалежно від того, чи вміст перевищує розмір.</p>
+        <div class="box limited overflow-scroll">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lectus non
+                sapien tristique convallis. Прокрути, щоб побачити приховане.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis...
+            </p>
+        </div>
+        <!-- auto -->
+        <h2>overflow: auto</h2>
+        <p>Смуги прокручування з'являються лише якщо вміст не поміщається.</p>
+        <div class="box limited overflow-auto">
+            <p>
+                Довгий текст. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lectus non
+                sapien tristique convallis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum
+                nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+        </div>
+
+        <h2>overflow-x та overflow-y</h2>
+        <p>Контролюють прокрутку по горизонталі або вертикалі окремо.</p>
+        <div class="box limited overflow-x">
+            <strong>overflow-x: auto; overflow-y: hidden;</strong>
+            <div class="wide-content">
+                <p> Це дуже широке вміст—наприклад, довга рядкова панорама або велике зображення.Lorem ipsum dolor
+                    sit
+                    amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                    fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                    egestas.Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                    fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                    egestas.Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                    fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                    egestas.</p>
+            </div>
+        </div>
+        <div class="box limited overflow-y">
+            <strong>overflow-y: auto; overflow-x: hidden;</strong>
+            <p>
+                Довгий вертикальний текст, який викликає вертикальну прокрутку. <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                (Додано багато тексту, щоб перевищити висоту контейнера.)
+            </p>
+        </div>
+        <!-- clip -->
+        <section class="example">
+            <h2>overflow: clip</h2>
+            <p>Обрізає вміст без створення смуг прокрутки.</p>
+            <div class="box limited overflow-clip">
+                <p>Тут вміст буде обірваний (clipped) без смуги прокрутки. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Phasellus dictum nisi at nunc
+                    fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                    fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nisi at nunc
+                    fringilla, a facilisis erat facilisis. Donec vitae lectus non sapien tristique convallis.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Alexandr Fedorenko. 2025</p>
+    </footer>
+
 </body>
 
 </html>

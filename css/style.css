@@ -1,6 +1,6 @@
-/* Базові стилі для сторінки */
+/*=== Базові стилі для сторінки ===*/
 body {
-    margin: 0;
+    margin-top: 61px;
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f8f8f8;
 }
@@ -9,7 +9,6 @@ body {
 nav {
     background-color: #222;
     position: fixed;
-    /* завжди зверху, чат ГПТ підсказав! */
     top: 0;
     left: 0;
     width: 100%;
@@ -19,7 +18,7 @@ nav {
 
 /* Список меню */
 nav ul {
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
     list-style: none;
     display: flex;
@@ -31,7 +30,7 @@ nav ul li {
     margin: 0;
 }
 
-/* Посилання, чат ГПТ підсказав! */
+/* Посилання */
 nav ul li a {
     display: block;
     padding: 15px 25px;
@@ -43,13 +42,13 @@ nav ul li a {
     position: relative;
 }
 
-/* Ефект при наведенні, чат ГПТ підсказав! */
+/* Ефект при наведенні */
 nav ul li a:hover {
     background-color: #444;
     color: #ffd700;
 }
 
-/* Плавне підкреслення, чат ГПТ підсказав! */
+/* Плавне підкреслення */
 nav ul li a::after {
     content: "";
     position: absolute;
@@ -66,16 +65,71 @@ nav ul li a:hover::after {
     width: 60%;
 }
 
-/* Експерементуємо з розмірами блоків */
+/* Footer */
+footer {
+    background-color: #f5f5f5;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+/*=== Index.html ===*/
+
+.intro {
+    max-width: 800px;
+    margin: 100px auto 50px;
+    /* відступ від меню зверху */
+    padding: 20px;
+    background-color: #f0f6ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    font-size: 16px;
+    color: #222;
+}
+
+.intro h1 {
+    text-align: center;
+    color: #0366d6;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.github-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.github-button a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #24292e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.github-button a:hover {
+    background-color: #0366d6;
+}
+
+/*=== Експерименти з блоками ===*/
 .box {
     margin-top: 50px;
     border: 5px solid #333;
     padding: 5px;
     margin-bottom: 20px;
     height: 400px;
-    /* висота 400px, в майбутньому потрібно інше меню, це кожного разу незручно */
     width: 50%;
-
 }
 
 .box img {
@@ -85,12 +139,12 @@ nav ul li a:hover::after {
     height: 300px;
 }
 
-/* Виділений текст в span */
+/* Виділений текст */
 .highlight {
     font-weight: bold;
 }
 
-/* Фонові кольори для блоків на сторікі 2 та 3 */
+/* Фон для сторінок 2 і 3 */
 .background-2-3 {
     background-color: aqua;
     padding: 10px;
@@ -138,4 +192,211 @@ nav ul li a:hover::after {
     border: 5px solid #333;
     box-sizing: border-box;
     margin: 50px 0;
+}
+
+/* === FLOAT and CLEAR === */
+
+
+/* Плаваючі блоки */
+.float-block {
+    width: 220px;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    background: #f0f6ff;
+    border: 1px solid rgba(3, 102, 214, 0.15);
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.float-block img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+/* Лівий float */
+.float-left {
+    float: left;
+}
+
+/* Правий float */
+.float-right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+/* Текстові стовпчики */
+.short-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 8px;
+    text-align: justify;
+    max-width: 400px;
+}
+
+/* Елемент, що очищає обтікання */
+.clear-block {
+    clear: both;
+    background: #fff6e6;
+    padding: 10px;
+    margin: 15px 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* clearfix для контейнерів */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* === Overflow === */
+
+.page-content {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Обмежений контейнер */
+.box.limited {
+    width: 480px;
+    height: 180px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: visible;
+    position: relative;
+    margin-top: 10px;
+}
+
+/* Налаштування конкретних варіантів */
+.box.limited.overflow-visible {
+    overflow: visible;
+}
+
+.box.limited.overflow-hidden {
+    overflow: hidden;
+}
+
+.box.limited.overflow-scroll {
+    overflow: scroll;
+    /* завжди показує смуги прокрутки */
+}
+
+.box.limited.overflow-auto {
+    overflow: auto;
+    /* смуги з'являються за потреби */
+}
+
+.box.limited.overflow-clip {
+    overflow: clip;
+    /* обрізає без скролу */
+}
+
+/* X приклад */
+.box.limited.overflow-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Y приклад */
+.box.limited.overflow-y {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+/* overflow-x */
+.wide-content {
+    width: 1200px;
+    padding: 8px;
+    background: #16f8d2;
+}
+
+/* === Позиціонування === */
+.pos-box {
+    width: 200px;
+    padding: 15px;
+    margin: 10px 0;
+    background: #f0f6ff;
+    border: 1px solid #0366d6;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Static */
+.static-box {
+    position: static;
+}
+
+/* Relative */
+.relative-box {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+/* Absolute */
+.absolute-container {
+    position: relative;
+    height: 150px;
+    background: #fff6e6;
+    border: 1px solid orange;
+    padding: 10px 10px 10px 10px;
+    /* додатковий внутрішній відступ */
+    box-sizing: border-box;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 180px;
+    /* щоб не виходив за межі */
+    background: #ffd166;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Fixed */
+.fixed-box {
+    position: fixed;
+    top: 80px;
+    /* щоб не перекривати меню */
+    right: 20px;
+    background: #ef476f;
+    color: #fff;
+    z-index: 100;
+}
+
+/* Sticky */
+
+.sticky-box {
+    position: sticky;
+    top: 0;
+    /* прилипає до верху контейнера */
+    background: #06d6a0;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.sticky-container {
+    max-width: 600px;
+    /* обмежена ширина */
+    height: 400px;
+    /* висота контейнера для демонстрації прокрутки */
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
 }

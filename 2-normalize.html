@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Normalize.css експеримент</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <nav>
         <ul>
+            <li><a href="index.html">Головна</a></li>
             <li><a href="1-block-inline.html">Блокові та інлайнові елементи</a></li>
             <li><a href="2-normalize.html">Нормалізація стилів</a></li>
             <li><a href="3-reset.html">Скидання стилів</a></li>
@@ -21,34 +22,37 @@
             <li><a href="7-positioning.html">Позиціонування елементів</a></li>
         </ul>
     </nav>
-
-    <div class="box">
-        <h2> Перший блок для прикладу</h2>
-        <img src="pics/block.png" alt="Блок">
-    </div>
-    <div class="box">
-        <h2> Другий блок для прикладу</h2>
-        <img src="pics/block2.png" alt="Блок 2">
-        <p>
-            Цей текст <span class="highlight">виділений</span> і знаходиться в цьому ж рядку.
-        </p>
-    </div>
-    <div class="background-2-3">
-        <p>
-            <span class="highlight">h2</span> і <span class="highlight">p</span> зберігають базовий стиль, але більш
-            передбачуваний у всіх браузерах; маркери списків <span class="highlight">ul</span> та відступи
-            трохи підкориговані; блоки <strong>.box</strong> будуть виглядати близько до дефолту, з моїм
-            <strong>obrder</strong>, <strong>padding</strong> і <strong>margin-bottom</strong>.<br>
-            <strong>div</strong> і <strong>p</strong> залишаться зі своїми стандартними відступами, але вони
-            стануть більш передбачуваними;
-            наприклад, різні браузери не будуть додавати зайві верхні/нижні відступи до <strong>h2</strong> чи
-            <strong>p</strong>.<br>
-            <strong>Висновок:</strong><br>
-            <strong>Normalize.css</strong> — зручно, коли хочеш залишити дефолтні стилі браузера, але зробити їх
-            однаковими.
-
-        </p>
-    </div>
+    <main>
+        <div class="box">
+            <h2> Перший блок для прикладу</h2>
+            <img src="pics/block.png" alt="Блок">
+        </div>
+        <div class="box">
+            <h2> Другий блок для прикладу</h2>
+            <img src="pics/block2.png" alt="Блок 2">
+            <p>
+                Цей текст <span class="highlight">виділений</span> і знаходиться в цьому ж рядку.
+            </p>
+        </div>
+        <div class="background-2-3">
+            <p>
+                <span class="highlight">h2</span> і <span class="highlight">p</span> зберігають базовий стиль, але більш
+                передбачуваний у всіх браузерах; маркери списків <span class="highlight">ul</span> та відступи
+                трохи підкориговані; блоки <strong>.box</strong> будуть виглядати близько до дефолту, з моїм
+                <strong>obrder</strong>, <strong>padding</strong> і <strong>margin-bottom</strong>.<br>
+                <strong>div</strong> і <strong>p</strong> залишаться зі своїми стандартними відступами, але вони
+                стануть більш передбачуваними;
+                наприклад, різні браузери не будуть додавати зайві верхні/нижні відступи до <strong>h2</strong> чи
+                <strong>p</strong>.<br>
+                <strong>Висновок:</strong><br>
+                <strong>Normalize.css</strong> — зручно, коли хочеш залишити дефолтні стилі браузера, але зробити їх
+                однаковими.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>Alexandr Fedorenko. 2025</p>
+    </footer>
 </body>
 
 </html>

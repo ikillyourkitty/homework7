@@ -2,15 +2,16 @@
 <html lang="uk">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Float & Clear</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <nav>
         <ul>
+            <li><a href="index.html">Головна</a></li>
             <li><a href="1-block-inline.html">Блокові та інлайнові елементи</a></li>
             <li><a href="2-normalize.html">Нормалізація стилів</a></li>
             <li><a href="3-reset.html">Скидання стилів</a></li>
@@ -20,7 +21,46 @@
             <li><a href="7-positioning.html">Позиціонування елементів</a></li>
         </ul>
     </nav>
+    <main>
+        <!-- Лівий float -->
+        <div class="clearfix">
+            <div class="float-block float-left">
+                <img src="pics/block.png" alt="Блок">
+                Лівий блок
+            </div>
+            <p class="short-text">
+                Це текст абзацу, який обтікає блок зліва. Він займає простір праворуч від картинки і виглядає як
+                стовпчик.
+            </p>
+        </div>
+        <!-- Правий float -->
+        <div class="clearfix">
+            <div class="float-block float-right">
+                <img src="pics/block2.png" alt="Блок">
+                Правий блок
+            </div>
+            <p class="short-text">
+                А тут блок праворуч, а текст обтікає його зліва. Так зручно робити, наприклад, статті з ілюстраціями.
+            </p>
+        </div>
+        <!-- Приклад clear -->
+        <div>
+            <div class="float-block float-left">
+                <img src="pics/block.png" alt="Блок">
+                Лівий блок
+            </div>
+            <p class="short-text">
+                Якщо додати ще один абзац після блоку без очищення, він теж буде обтікати картинку.
+            </p>
 
+            <div class="clear-block">
+                Тут ми використали <code>clear: both;</code> — і текст пішов нижче блоку, а не поруч.
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Alexandr Fedorenko. 2025</p>
+    </footer>
 </body>
 
 </html>
